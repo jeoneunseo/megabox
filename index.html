@@ -379,13 +379,15 @@
             width:100%;
             height:100%;
         }        
+        .poster .movie-contents a p{
+            overflow: hidden;
+            font-size:12px;
+        }
+
         .poster .movie-contents a p:first-child{
             width:100%;
             height:80%;
             border-bottom:1px solid rgba(255,255,255,0.3);            
-        }
-        .poster .movie-contents a p{
-            overflow: hidden;
         }
 
 
@@ -752,10 +754,10 @@
         }
 
         .notice-container{
-            margin:50px 0;
+            margin:50px 0 46px;
             border-top:1px solid rgba(0,0,0,0.3);
             border-bottom:1px solid rgba(0,0,0,0.3);
-            padding:30px 0;
+            padding:16px 0;
         }
         .notice-container ul{
             display:grid;
@@ -763,13 +765,76 @@
         }
         .notice-container ul li{
             border-right:1px solid rgba(0,0,0,0.3);
+            text-align:center;
         }
+        .notice-container ul li.cinema,
+        .notice-container ul li.notice-tit{
+            text-align:left;
+        }
+
         .notice-container ul li.notice-tit{
             padding-left:1em;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
         }
+
+        .notice-container ul li.notice-tit:hover{
+            font-weight:700;
+        }
+        .notice-container ul li.notice-tit span{
+            font-weight:700;
+            color:#503396;
+        }
+
         .notice-container ul li:last-child{
             border-right:none;
         }
+
+        .megainfo-nav ul{
+            display:grid;
+            grid-template-columns:repeat(6,1fr);                        
+        }
+        .megainfo-nav ul li{
+            display:flex;
+            flex-flow:column nowrap;
+            align-items:center;
+        }
+        .megainfo-nav ul li .img-box a{
+            display:inline-block;
+            width:60px;
+            height:60px;
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:contain;            
+        }
+        .bg-mega01 a{
+            background-image:url(./images/ico-megainfo01.png);
+        }
+        .bg-mega02 a{
+            background-image:url(./images/ico-megainfo02.png);
+        }
+        .bg-mega03 a{
+            background-image:url(./images/ico-megainfo03.png);
+        }
+        .bg-mega04 a{
+            background-image:url(./images/ico-megainfo04.png);
+        }
+        .bg-mega05 a{
+            background-image:url(./images/ico-megainfo05.png);
+        }
+        .bg-mega06 a{
+            background-image:url(./images/ico-megainfo06.png);
+        }
+        .megainfo-nav ul li p{
+            text-align:center;
+        }
+
+        .banner-bottom .img-box{
+            position:relative;
+        }
+
+        
 
 
         
@@ -794,7 +859,6 @@
                 margin-top:-13px;
             }
         }
-
 
         @media (max-width:1024px){
             h1{               
@@ -870,9 +934,11 @@
                 max-width:100%;                     
             }
 
+            .notice-container ul{
+                grid-template-columns:1fr 8.5fr 1.5fr 1fr;
+            }
 
         }
-
 
         @media (max-width:840px){
             .wrap{
@@ -986,7 +1052,22 @@
                 border-radius:50%;
             }
 
-
+            .notice-container ul{
+                grid-template-columns:8fr 2.5fr 1.5fr;
+            }
+            .notice-container ul li.cinema{
+                display:none;
+            }
+            .notice-container ul li.notice-tit{
+                padding-left:0;
+            }
+            .megainfo-nav ul li .img-box a{
+                width:50px;
+                height:50px;
+            }
+            .megainfo-nav ul li p{
+                display: none;
+            }
 
 
         }       
@@ -1042,6 +1123,12 @@
                 display:none;
             }
 
+            .notice-container ul{
+                grid-template-columns:10fr 2fr;
+            }
+            .notice-container ul li.write-date{
+                display:none;
+            }
 
         }
     </style>
@@ -2667,9 +2754,43 @@
                 </div>
 
             </div>
+            <div class="container megainfo-nav">
+                <ul>
+                    <li>
+                        <div class="img-box bg-mega01" title="고객센터"><a href="#"></a></div>
+                        <p><a href="#">고객센터</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega02" title="자주 묻는 질문"><a href="#"></a></div>
+                        <p><a href="#">자주 묻는 질문</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega03" title="1:1 문의"><a href="#"></a></div>
+                        <p><a href="#">1:1 문의</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega04" title="단체/대관문의"><a href="#"></a></div>
+                        <p><a href="#">단체/대관문의</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega05" title="분실물 문의/접수"><a href="#"></a></div>
+                        <p><a href="#">분실물 문의/접수</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega06" title="더 부티크 프라이빗 대관예매"><a href="#"></a></div>
+                        <p><a href="#">더 부티크 프라이빗 대관예매</a></p>
+                    </li>
+
+                </ul>
+            </div>
         </section>
         <section class="sec banner-bottom">
-            <div class="container"></div>
+            <div class="container">
+                <div class="img-box">
+                    <a href="#"><img src="./images/banner-bottom.jpg" alt="하단광고"></a>
+                    <div class="ad">AD</div>
+                </div>
+            </div>
         </section>
         <footer class="footer">
             <div class="container"></div>
