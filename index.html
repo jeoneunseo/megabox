@@ -603,7 +603,7 @@
             font-size:3em;
         }
         
-        .cutation{
+        .curation{
             background-color:#252451;
         }
         .curation-contents{
@@ -615,12 +615,34 @@
         .select-curation{
             flex:1;
             margin-right:50px;
-            background-color:red;
         }
         .curation-content{
-            flex:2;
-            background-color:red;
+            flex:3;
+        }
 
+        .curation .poster{
+            overflow:initial;
+        }
+        .curation .poster .img-box{
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        .poster-over{
+            position:absolute;
+            left:-10px;
+            top:-5px;
+            z-index:100;
+            padding:8px 10px 36px;
+            border-bottom-left-radius:40px;
+            border-bottom-right-radius:40px;
+            background-color:#037b94;
+
+            text-transform: uppercase;
+            font-weight:700;
+            font-size:1.1em;
+            color:#fff;
+            line-height:1.2em;
         }
         
 
@@ -817,6 +839,10 @@
             .benefit-ad{
                 display:none;
             }
+
+            .poster .movie-contents a p{
+                overflow:hidden;
+            }
         }
 
         @media (max-width:490px){
@@ -852,6 +878,19 @@
             }
             .benefit-banner02{
                 display:none;
+            }
+            .benefit-nav a i{
+                font-size: 2.5em;
+            }
+            .benefit-nav a:last-child{
+                font-size:0.9em;
+            }
+            .benefit-nav span{
+                display:none;
+            }
+
+            .poster .movie-contents a p{
+                overflow:hidden;
             }
         }
     </style>
@@ -1005,14 +1044,14 @@
                                 <div class="swiper-slide swiper-slide01">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list01.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl.jpg" alt="불한당">
                                         </div>
                                         <div class="movie-num">
                                             <h3>1</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>(오리엔트 특급살인)을 이을 또 하나의 완벽한 살인사건<br>살인은 사작에 불과했다!<br><br>행복한 신혼부부를 태운 나일강의 초호화 여객선<br>그곳에서 끔찍한 살인사건이 벌어진다.</p>
+                                                <p>범죄조직의 1인자를 노리는 재호와 세상 무서운 것 없는 패기 넘치는 신참 현수는 교도소에서 만나 서로에게 끌리고 끈끈한 의리를 다져간다.<br><br>출소 후, 함께 권력을 차지하기 위해 의기투합하던 중, 두 사람의 숨겨왔던 야망이 조금씩 드러나고, 서로에 대해 새로운 사실을 알게 되면서 그들의 관계는 흔들리기 시작하는데…<br><br>믿는 놈을 조심하라! 믿음의 순간 배신은 이미 시작되었다!</p>
                                                 <p>관람평</p>
                                                 <p>0</p>
                                             </a>
@@ -1029,14 +1068,14 @@
                                 <div class="swiper-slide swiper-slide02">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list02.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl2.jpg" alt="타짜">
                                         </div>
                                         <div class="movie-num">
                                             <h3>2</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>샤오미(송운화)만 사랑해 온 직진남 샤오룬(가진동),<br>하지만 청혼하려던 순간 갑작스런 사고로 저승에 간다.<br>환생하고 싶으면 붉은 실로 커플 매칭을 하는 월하노인 업무를 수행해야 한다는데,<br>하필 사사건건 부딪히던 핑키(왕정)와 파트너가 된다.</p>
+                                                <p>"화투. 말이 참 예뻐요. 꽃을 가지고 하는 싸움."<br>낯선 자를 조심해라.<br>이 바닥엔 영원한 친구도, 영원한 원수도 없다.<br><br>"아쉬울 것도 없고, 억울할 것도 없다. 어차피, 내가 아는 사람들은 다 죽거나 다쳤다."</p>
                                                 <p>관람평</p>
                                                 <p>5</p>
                                             </a>
@@ -1053,14 +1092,14 @@
                                 <div class="swiper-slide swiper-slide03">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list03.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl3.jpg" alt="해바라기">
                                         </div>
                                         <div class="movie-num">
                                             <h3>3</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>2016년 전세계가 주목한 그 시작의 날<br><br>진보와 보수를 넘나드는 정치인들의 그날의 비화를 증언한다!<br><br>부정부패와 국정농단으로 국민들을 우롱했던 날들.<br>대한민국의 1,600만명이 한 목소리로 세상을 바꿨던 그때를 기억합니다.</p>
+                                                <p>고교 중퇴 후 맨주먹으로 거리의 양아치들을 싹 쓸어버렸던 오태식(김래원).<br>술먹으면 개가 되고 싸움을 했다하면 피를 본다는 그는 칼도 피도 무서워 하지 않는 잔혹함으로 ‘미친 개’라고 불렸다.<br>그가 가석방되었다.<br><br>‘술마시지 않는다’, ‘싸우지 않는다’, ‘울지 않는다’</p>
                                                 <p>관람평</p>
                                                 <p>2</p>
                                             </a>
@@ -1077,14 +1116,14 @@
                                 <div class="swiper-slide swiper-slide04">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list04.jpg" alt="듄">
+                                            <img src="./images/gl4.jpg" alt="어메이징스파이더맨">
                                         </div>
                                         <div class="movie-num">
                                             <h3>4</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>"듄을 지배하는 자가 우주를 지배한다!"<br><br>10191년, 아트레이데스 가문의 후계자인 폴(티모시 샬라메)은 시공을 초월한 존재이자 전 우주를 구원할 예지된 자의 운명을 타고났다.<br>그리고 어떤 계시처럼 매일 꿈에서 아라키스 행성에 있는 한 여인을 만난다.</p>
+                                                <p>아버지의 옛 동료 코너스 박사(리스 이판)의 실험실을 찾아가게 된 피터는 우연한 사고로 특별한 능력을 갖게 되고,<br><br>세상을 위협하는 세력앞에 피터는 그의 인생을 통째로 바꾸어 버릴 일생일대의 선택, 바로 ‘스파이더맨’이라 불리우는 영웅이 되기로 결심하는데…</p>
                                                 <p>관람평</p>
                                                 <p>5</p>
                                             </a>
@@ -1101,14 +1140,14 @@
                                 <div class="swiper-slide swiper-slide05">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list05.jpg" alt="해적:도깨비 깃발">
+                                            <img src="./images/gl5.jpg" alt="신세계">
                                         </div>
                                         <div class="movie-num">
                                             <h3>5</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>"가자, 보물 찾으러!"<br><br>자칭 고려 제일검인 의적단 두목 '무치'(강하늘)와 바다를 평정한 해적선의 주인 '해랑'(한효주).<br>한 배에서 운명을 함께하게 된 이들이지만 산과 바다, 태생부터 상극으로 사사건건 부딪히며 바람 잘 날 없는 항해를 이어간다.</p>
+                                                <p>경찰청 수사기획과 강과장(최민식)은 국내 최대 범죄 조직인 '골드문'이 기업형 조직으로 그 세력이 점점 확장되자 신입 경찰 이자성(이정재)에게 잠입 수사를 명한다.<br>그리고 8년, 자성은 골드문의 2인자이자 그룹 실세인 정청(황정민)의 오른팔이 되기에 이른다.<br><br>"우리 브라더는 그냥 딱, 이 형님만 믿으면 돼야!"</p>
                                                 <p>관람평</p>
                                                 <p>15</p>
                                             </a>
@@ -1149,14 +1188,14 @@
                                 <div class="swiper-slide swiper-slide07">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list07.jpg" alt="해리포터와 불사조 기사단">
+                                            <img src="./images/gl6.jpg" alt="300">
                                         </div>
                                         <div class="movie-num">
                                             <h3>7</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>역사상 최고의 해전! 위대한 전사들이 더 강력하게 돌아온다!<br><br>BC 480년 페르시아의 '크세르크세스'황제는 100만 대군으로 그리스를 향해 진군하고.<br>육지에선 스파르타의 왕 '레오니다스' 가 이끄는 300명의 전사들이 싸우는 동안, 같은 시기 그리스의 장군 '테미스토클레스' 는 '아르테미시아' 가 이끄는 엄청난 규모의 페르시아 해군과 살라미스 해협에서 부딪히게 되는데…</p>
                                                 <p>관람평</p>
                                                 <p>25</p>
                                             </a>
@@ -1197,14 +1236,14 @@
                                 <div class="swiper-slide swiper-slide09">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list09.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl7.jpg" alt="글래디에이터">
                                         </div>
                                         <div class="movie-num">
                                             <h3>9</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>절정기의 로마제국은 그 영토가 광대하여 아프리카 사막에서 잉글랜드 북쪽까지 걸쳐 있었다. 그 당시 세계는 그 총인구의 1/4이 로마 황제의 지배 하에 있었다. 때는 서기 180년, 마르커스 아우렐리우스(Marcus Aurelius) 황제의 12년에 걸친 게르마니아(Germania) 정벌이 거의 마무리되던 무렵이었다. 마지막 하나 남은 적의 요새만 함락하면 이제 로마 제국은 평화가 온다.</p>
                                                 <p>관람평</p>
                                                 <p>2</p>
                                             </a>
@@ -1213,8 +1252,7 @@
                                     <div class="poster-bottom">
                                         <button type="button" class="btn-best">
                                             <i class="far fa-heart"></i>
-                                            <span>102<i class="far fa-heart"></i>
-                                            <span>258</span></span>
+                                            <span>102</span>
                                         </button>
                                         <button type="button" class="btn-ticket">예매</button>
                                     </div>
@@ -1222,14 +1260,14 @@
                                 <div class="swiper-slide swiper-slide10">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list10.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl8.jpg" alt="셜록">
                                         </div>
                                         <div class="movie-num">
                                             <h3>10</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>인터넷과 스마트폰으로 무장한 21세기의 천재 탐정 셜록.<br><br>런던 경시청을 도와 기묘한 사건들을 해결하는 그의 활약이 펼쳐진다. 아서 코넌 도일의 원작을 재창조한 시리즈.</p>
                                                 <p>관람평</p>
                                                 <p>31</p>
                                             </a>
@@ -1246,14 +1284,14 @@
                                 <div class="swiper-slide swiper-slide11">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list11.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl9.jpg" alt="존윅">
                                         </div>
                                         <div class="movie-num">
                                             <h3>11</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>업계 최고의 레전드 킬러 ‘존 윅’은 과거를 뒤로한 채 은퇴를 선언하지만, 과거 자신의 목숨을 구했던 옛 동료와 피로 맺은 암살자들의 룰에 의해 로마로 향한다.<br>‘국제 암살자 연합’을 탈취하려는 옛 동료의 계획으로 ‘존 윅’은 함정에 빠지게 되고, 전세계 암살자들의 총구는 그를 향하는데…</p>
                                                 <p>관람평</p>
                                                 <p>9</p>
                                             </a>
@@ -1270,14 +1308,14 @@
                                 <div class="swiper-slide swiper-slide12">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-list12.jpg" alt="나일강의 죽음">
+                                            <img src="./images/gl10.jpg" alt="분노의 질주">
                                         </div>
                                         <div class="movie-num">
                                             <h3>12</h3>
                                         </div>
                                         <div class="movie-contents">
                                             <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>역대 최강의 멤버 VS 사상 최악의 상대 팀을 지키기 위한 그들의 반격이 시작된다!<br><br>거대 범죄 조직을 소탕한 뒤 전과를 사면 받고, 평범한 일상을 되찾은 도미닉(빈 디젤)과 멤버들.<br>그들을 차례대로 제거하려는 최악의 상대 데카드 쇼(제이슨 스타뎀)의 등장으로 도미닉은 다시 한 번 역대 최강의 멤버들을 불러모아 숨막히는 반격을 결심하는데…</p>
                                                 <p>관람평</p>
                                                 <p>12</p>
                                             </a>
@@ -2334,37 +2372,79 @@
                 <div class="benefit-nav">
                     <ul>
                         <li>
-                            <a href="#"><i class="fas fa-gem"></i></a>
-                            <a href="#">VIP LAUNGE</a>
+                            <a href="#"><i class="fas fa-gem" title="VIP LAUNGE"></i></a>
+                            <a href="#">VIP <span>LAUNGE</span></a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-user"></i></a>
+                            <a href="#"><i class="fas fa-user" title="멤버십"></i></a>
                             <a href="#">멤버십</a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-address-card"></i></a>
+                            <a href="#"><i class="fas fa-address-card" title="할인카드"></i></a>
                             <a href="#">할인카드</a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-gift"></i></a>
+                            <a href="#"><i class="fas fa-gift" title="이벤트"></i></a>
                             <a href="#">이벤트</a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-wine-glass"></i></a>
+                            <a href="#"><i class="fas fa-wine-glass" title="스토어"></i></a>
                             <a href="#">스토어</a>
                         </li>                       
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="sec cutation">
+        <section class="sec curation">
             <div class="container">
                 <h2 class="sec-tit sec-tit-light">
                     큐레이션
                 </h2>
                 <div class="curation-contents">
-                    <div class="select-curation">포스터</div>
-                    <div class="curation-content">포스터</div>
+                    <div class="select-curation">
+                        <div class="poster">
+                            <div class="img-box">
+                                <img src="./images/curation-list01.jpg" alt="큐레이션1">
+                            </div>
+                            <div class="poster-over">
+                                <p>
+                                    megabox<br>
+                                    classic<br>
+                                    society
+                                </p>
+                            </div>
+                        </div>
+                        <div class="poster-bottom">
+                            <button type="button">상세정보</button>
+                            <button type="button">예매</button>
+                        </div>
+                        
+                    </div>
+                    <div class="curation-content">
+                        <div class="curation-content-tit">
+                            <h3>#굿즈패키지</h3>
+                            <h4>어나더 라운드</h4>
+                        </div>    
+                        <div class="curation-content-txt">
+                            <h5>[상영정보]</h5>
+                            <ul>
+                                <li>- 개봉일 : 2022.01.19</li>
+                                <li>- 상영타입 : 2D(자막)</li>
+                                <li>- 감독 : 토마스 빈터베르그</li>
+                                <li>- 장르 : 드라마, 코미디 / 116분</li>
+                                <li>- 등급 : 15세이상관람가</li>
+                                <li>- 출연진 : 매즈 미켈슨, 토마스 보 라센</li>
+                            </ul>
+                        </div>
+                        <div class="curation-content-poster">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2469,23 +2549,23 @@
 
         // movie list swiperJs
         var swiper = new Swiper(".movie-list .swiper", {
-            slidesPerView: 4.2,
+            slidesPerView: 4.5,
             spaceBetween: 20,           
             breakpoints: {
                 0: {
-                    slidesPerView: 1.5, 
+                    slidesPerView: 1.8, 
                     spaceBetween: 40,                  
                 },
                 768: {
-                    slidesPerView: 2.5,
+                    slidesPerView: 2.9,
                     spaceBetween: 36,   
                 },
                 1024: {
-                    slidesPerView: 3.5,
+                    slidesPerView: 4.1,
                     spaceBetween: 30,   
                 },
                 1200: {
-                    slidesPerView: 4.2,
+                    slidesPerView: 4.5,
                 },
             },
         });
@@ -2577,6 +2657,10 @@
                 $('#move-span').css('left','75%');
             }
         });
+
+
+        let curationSwiper = new Swiper('.curation .swiper');
+
     </script>
 </body>
 </html>
