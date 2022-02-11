@@ -73,6 +73,18 @@
             color:#fff;
             opacity:0.3;
         }
+        .icons{
+            display:inline-block;
+            margin:0;
+            border:none;
+            padding:0;
+            background-repeat:no-repeat;
+            background-position:left top;
+            background-size: 100% auto;
+            font-size:0;
+            font-style:normal;
+            vertical-align:middle;
+        }
 
 
         .skip-menu a{
@@ -176,11 +188,14 @@
             position:relative;
             z-index:1000;
             border-bottom:1px solid rgba(255,255,255,0.5);
-            padding:10px 0;
             background-color:#0e090a;
             color:#fff;
         }
-        h1{
+        .header .desk-container{
+            padding-top:10px;
+            padding-bottom:10px;
+        }
+        .header .desk-container h1{
             position:absolute;
             left:50%;
             top:50%;
@@ -250,7 +265,6 @@
 
 
 
-
         .sub-nav li{
             margin-right:20px;
             font-size:1rem;
@@ -262,6 +276,54 @@
         .sub-nav li:hover{
             opacity:1;
         }
+
+
+        .m-container{
+            display:none;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .m-container h1{
+            box-sizing:content-box;
+            width:120px;
+            padding-left:27px;
+            order:2;
+        }
+        .ticketing{
+            order:1;
+        }
+        .m-r-items{
+            order:3;
+        }
+
+
+
+        .icon-ticket{
+            width:30px;
+            height:30px;
+            background-image:url(./m-images/ico-m-ticket.png);
+        }
+        .icon-m-feed{
+            width:51px;
+            height:24px;
+            background-image:url(./m-images/ico-m-feed.png);
+        }
+        .icon-m-burger{
+            width:30px;
+            height:30px;
+            background-image:url(./m-images/ico-m-burger.png);
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -556,7 +618,6 @@
             box-shadow:10px 10px 10px rgba(0,0,0,0.3);
         }
 
-
         .btn-play-pause>i{
             cursor:pointer;
             display:none;
@@ -582,18 +643,11 @@
             position:relative !important;
         }
         
-
-
-
-
-
-
         .scrollbar span{
             width:25%;
             height:2px;                        
             background-color:rgba(0,0,0,0.1);
         }
-
 
         .scrollbar #move-span{
             position:absolute;            
@@ -838,6 +892,52 @@
             position:relative;
         }
 
+        .bnb{
+            position: fixed;
+            left:0;
+            right:0;
+            bottom:0;
+            z-index:6000;
+            padding:10px 0;
+            background-color:#fff;
+        }
+        .bnb ul{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-around;
+            align-items:center;
+        }
+        .bnb ul a{
+            display:flex;
+            flex-flow:column nowrap;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .bnb .icons{
+            width:40px;
+            height:40px;
+        }
+
+        .m-ico-home{
+            background-image:url(./m-images/bnb-home-on.png);
+        }
+        .m-ico-store{
+            background-image:url(./m-images/bnb-store-new.png);
+        }
+        .m-ico-reserve{
+            background-image:url(./m-images/bnb-reserve_new.png);
+        }
+        .m-ico-event{
+            background-image:url(./m-images/bnb-event_new.png);
+        }
+        .m-ico-mymega{
+            background-image:url(./m-images/bnb-mymega_new.png);
+        }
+
+
+
+
+
         .footer{
             padding:30px;
             background-color:#503396;
@@ -902,7 +1002,7 @@
         }
 
         @media (max-width:1024px){
-            h1{               
+            .header .desk-container h1{               
                 left:20px;                
                 transform:translate(0,-50%);
             }
@@ -968,6 +1068,10 @@
             .movie-list-nav span{
                 display:none;
             }
+
+            .poster .movie-contents a p{
+                font-size: 16px;
+            }
             .select-curation{
                 display:none;         
             }
@@ -1002,85 +1106,29 @@
                 right:50%;
             }
             .banner-top{display:none;}
-            .header{padding:20px 0;}
-            .header .container{
-                display:flex;
-                justify-content:space-between;
-            }
-            
-            h1{
-                left:50%;
-                transform:translate(-50%,-50%);
-            }
-            .quick-nav{
-                flex-direction:column;
-                justify-content:flex-start;
+
+            .header{
                 position:fixed;
-                left:-50%;
-                right:100%;
-                top:0;
-                bottom:0;
-                padding:30px 20px;
-                background-color:#000;
-                transition:0.3s;
-            }
-            
-            .quick-nav.show-quick{
                 left:0;
-                right:50%;
-            }
-            
-            .quick-nav>ul:first-child{
-                order:2;
-                flex-direction:column;
-            }            
-            .quick-nav>ul:first-child>li{
-                margin-bottom:20px;
-                font-size: 1.4em;
-                opacity:1;
-            }
-            .quick-nav>ul:last-child{
-                flex-wrap:wrap;                
-                order:1;
-                margin-bottom:30px;
-            }           
-            
-            .nav{
-                flex-direction:column;
-                justify-content: flex-start;
-                position:fixed;
-                left:100%;
-                right:-50%;
-                top:0;
-                bottom:0;
-                padding:30px 20px;
-                background-color:#000;
-                transition:0.3s;
-            }
-            .nav.show-nav{
-                left:50%;
                 right:0;
+                top:0;
+                border-bottom:none;
             }
-            .nav>ul{
-                flex-direction:column;               
+
+            .header .desk-container{display:none;}
+            .header .m-container{
+                display:flex;
             }
-            .nav>ul:first-child{
-                margin-right:0;
+
+            .poster .movie-contents a p{
+                font-size: 18px;
             }
-            .nav>ul>li{
-                margin-right:0;
-                margin-bottom:20px;
-            }
-            .sub-nav{
-                position:static;
-            }
-            .sub-nav>ul{
-                flex-direction:column;
-                padding:0;
+
+            .wrap>.movie-list{
+                padding-top:calc(40px + 55px);
             }
 
 
-            .btn-mo-quick,.btn-mo-nav{display:block;}
             .benefit-list{
                 width:100%;
             }
@@ -1112,7 +1160,12 @@
             .megainfo-nav ul li p{
                 display: none;
             }
-
+            .bnb{
+                display:block;
+            }
+            .footer{
+                padding-bottom:110px;
+            }
 
         }       
 
@@ -1178,6 +1231,8 @@
             }
 
         }
+
+
     </style>
     </head>
 <body>
@@ -1215,7 +1270,7 @@
             </div>
         </section>
         <header class="header">
-            <div class="container">
+            <div class="container desk-container">
                 <h1>
                     <span>메가박스</span>
                     <div class="img-box">
@@ -1299,6 +1354,22 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div class="container m-container">
+                <h1><a href="./index.html"><img src="./m-images/m-logo-white.png" alt="시작페이지로 이동"></a></h1>
+                <div class="ticketing">
+                    <a href="#">
+                        <i class="icons icon-ticket">예매</i>
+                    </a>
+                </div>
+                <div class="m-r-items">
+                    <a href="#">
+                        <i class="icons icon-m-feed">피드</i>
+                    </a>
+                    <a href="#">
+                        <i class="icons icon-m-burger">메뉴</i>
+                    </a>
                 </div>
             </div>
         </header>
@@ -2839,6 +2910,43 @@
                 </div>
             </div>
         </section>
+        <section class="bnb">
+            <div class="container bnb-container">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-home"></i>
+                            <span>홈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-store"></i>
+                            <span>스토어</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-reserve"></i>
+                            <span>예매</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-event"></i>
+                            <span>이벤트</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-mymega"></i>
+                            <span>MY</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <footer class="footer">
             <div class="container">
                 <div class="in clearfix">
