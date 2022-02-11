@@ -186,7 +186,7 @@
 
         .header{
             position:relative;
-            z-index:1000;
+            z-index:9998;
             border-bottom:1px solid rgba(255,255,255,0.5);
             background-color:#0e090a;
             color:#fff;
@@ -263,8 +263,6 @@
             justify-content:flex-end;
         }
 
-
-
         .sub-nav li{
             margin-right:20px;
             font-size:1rem;
@@ -276,6 +274,11 @@
         .sub-nav li:hover{
             opacity:1;
         }
+
+
+
+
+
 
 
         .m-container{
@@ -298,7 +301,6 @@
         }
 
 
-
         .icon-ticket{
             width:30px;
             height:30px;
@@ -314,6 +316,18 @@
             height:30px;
             background-image:url(./m-images/ico-m-burger.png);
         }
+
+        .m-login{
+            display:none;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background-color:#fff;
+        }
+
+
 
 
 
@@ -452,8 +466,6 @@
             height:80%;
             border-bottom:1px solid rgba(255,255,255,0.3);            
         }
-
-
 
 
         .poster .movie-contents a p:last-child{
@@ -700,8 +712,6 @@
         }
 
 
-
-
         .curation{
             background-color:#252451;
             color:#fff;
@@ -733,8 +743,6 @@
             color:#fff;
             line-height:1.2em;
         }
-
-
 
 
         .curation-content{
@@ -933,9 +941,6 @@
         .m-ico-mymega{
             background-image:url(./m-images/bnb-mymega_new.png);
         }
-
-
-
 
 
         .footer{
@@ -1229,6 +1234,13 @@
             .notice-container ul li.write-date{
                 display:none;
             }
+            .bnb .icons{
+                width:30px;
+                height:30px;
+            }
+            .bnb span{
+                font-size:0.8em;
+            }
 
         }
 
@@ -1360,7 +1372,7 @@
                 <h1><a href="./index.html"><img src="./m-images/m-logo-white.png" alt="시작페이지로 이동"></a></h1>
                 <div class="ticketing">
                     <a href="#">
-                        <i class="icons icon-ticket">예매</i>
+                        <i class="icons icon-ticket" id="btn-ticket">예매</i>
                     </a>
                 </div>
                 <div class="m-r-items">
@@ -1372,10 +1384,13 @@
                     </a>
                 </div>
             </div>
+            <div class="container m-login">
+                로그인창
+            </div>
         </header>
         <section class="sec movie-list">
             <div class="bg-box">
-                <img src="./images/movie-list03.jpg" alt="배경이미지">
+                <img src="./images/gl5.jpg" alt="배경이미지">
             </div>
             <div class="container">
                 <h2 class="sec-tit sec-tit-light">영화예매</h2>
@@ -3035,41 +3050,6 @@
         })
 
 
-        // sub-nav call event
-        $('.nav>ul>li').on({
-            'mouseover':function(){
-                $('.sub-nav').css('display','none');
-                $(this).children('.sub-nav').css('display','block');
-            }
-        });
-
-
-        // sub nav close event
-        $('.sub-nav').on({
-            'mouseout':function(){
-                $(this).css('display','none');
-            }
-        })
-
-
-        // mo quick menu call event
-        $('.btn-mo-quick').on({
-            'click':function(){               
-                $('.wrap,.quick-nav').toggleClass('show-quick');
-            }
-        })
-
-
-
-
-        // mo nav call event
-        $('.btn-mo-nav').on({
-            'click':function(){               
-                $('.wrap,.nav').toggleClass('show-nav');
-            }
-        })
-
-
         // window resize event
         $(window).resize(function(){
             let winWidth = $(this).width();
@@ -3259,6 +3239,21 @@
         function cuLoad(idxNum){
             $('#curation-ajax').load('curation.html #curation0' + idxNum);
         }
+    
+    
+        //모바일 이벤트
+        $('#btn-ticket').on({
+            'click':loadLogin,
+        })
+
+        function loadLogin(){
+            let logCfm = confirm('로그인 후 사용가능합니다.\n로그인 하시겠습니까?')
+            console.log(logCfm);
+        }
+    
+    
+    
+    
     </script>
 </body>
 </html>
